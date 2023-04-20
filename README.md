@@ -19,7 +19,7 @@
 </p>
 
 
-Alibaba RSocket Broker是一款基于RSocket协议的反应式对等通讯系统，为通讯多方构建分布式的RPC, Pub/Sub, Streaming等通讯支持。
+EAIP RSocket Broker是一款基于RSocket协议的反应式对等通讯系统，为通讯多方构建分布式的RPC, Pub/Sub, Streaming等通讯支持。
 
 * 反应式: 无需担心线程模型、全异步化、流式背压支持、独特的对等通讯模式可适应各种内部网络环境和跨云混云的需求。
 * 程控：完善的控制面(Control Plane)支持，可定制和方便的功能扩展，如支持反向的Prometheus Metrics采集、ZipKin RSocket

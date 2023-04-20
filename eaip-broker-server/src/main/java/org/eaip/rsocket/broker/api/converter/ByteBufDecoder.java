@@ -2,6 +2,7 @@ package org.eaip.rsocket.broker.api.converter;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.codec.AbstractDataBufferDecoder;
 import org.springframework.core.io.buffer.DataBuffer;
@@ -29,7 +30,7 @@ public class ByteBufDecoder extends AbstractDataBufferDecoder<ByteBuf> {
     }
 
     @Override
-    public ByteBuf decode(DataBuffer dataBuffer, ResolvableType elementType,
+    public ByteBuf decode(@NotNull DataBuffer dataBuffer, @NotNull ResolvableType elementType,
                           @Nullable MimeType mimeType, @Nullable Map<String, Object> hints) {
         if (dataBuffer instanceof NettyDataBuffer) {
             return ((NettyDataBuffer) dataBuffer).getNativeBuffer();
