@@ -1,0 +1,10 @@
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerJsonImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerGraphQLJsonImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerHessianImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerProtobufImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerCborImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerSerializationImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerAvorImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerTextImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerBinaryImpl
+org.eaip.rsocket.encoding.impl.ObjectEncodingHandlerCloudEventsImpl

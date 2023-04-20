@@ -1,0 +1,15 @@
+java.time.LocalDate=org.eaip.rsocket.encoding.hessian.io.java17.LocalDateSerializer
+java.time.LocalDateTime=org.eaip.rsocket.encoding.hessian.io.java17.LocalDateTimeSerializer
+java.time.LocalTime=org.eaip.rsocket.encoding.hessian.io.java17.LocalTimeSerializer
+java.time.Duration=org.eaip.rsocket.encoding.hessian.io.java17.DurationSerializer
+java.time.Instant=org.eaip.rsocket.encoding.hessian.io.java17.InstantSerializer
+java.time.Period=org.eaip.rsocket.encoding.hessian.io.java17.PeriodSerializer
+java.time.MonthDay=org.eaip.rsocket.encoding.hessian.io.java17.MonthDaySerializer
+java.time.YearMonth=org.eaip.rsocket.encoding.hessian.io.java17.YearMonthSerializer
+java.util.Optional=org.eaip.rsocket.encoding.hessian.io.java17.OptionalSerializer
+java.time.OffsetTime=org.eaip.rsocket.encoding.hessian.io.java17.OffsetTimeSerializer
+java.time.ZoneOffset=org.eaip.rsocket.encoding.hessian.io.java17.ZoneOffsetSerializer
+java.time.ZoneId=org.eaip.rsocket.encoding.hessian.io.java17.ZoneIdSerializer
+java.time.OffsetDateTime=org.eaip.rsocket.encoding.hessian.io.java17.OffsetDateTimeSerializer
+java.time.ZonedDateTime=org.eaip.rsocket.encoding.hessian.io.java17.ZonedDateTimeSerializer
+java.time.Year=org.eaip.rsocket.encoding.hessian.io.java17.YearSerializer

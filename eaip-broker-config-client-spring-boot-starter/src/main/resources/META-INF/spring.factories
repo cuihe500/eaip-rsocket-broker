@@ -1,0 +1,4 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+org.eaip.rsocket.config.bootstrap.RSocketConfigPropertySourceLocator
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.eaip.rsocket.config.client.RSocketCloudConfigAutoConfiguration

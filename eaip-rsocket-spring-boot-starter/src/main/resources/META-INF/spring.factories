@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.eaip.spring.boot.rsocket.RSocketAutoConfiguration,\
+org.eaip.spring.boot.rsocket.RSocketListenerAutoConfiguration
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+org.eaip.spring.boot.rsocket.upstream.JwtTokenFailureAnalyzer

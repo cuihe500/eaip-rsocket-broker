@@ -1,0 +1,2 @@
+org.eaip.spring.boot.rsocket.RSocketAutoConfiguration
+org.eaip.spring.boot.rsocket.RSocketListenerAutoConfiguration

@@ -1,0 +1,43 @@
+package org.eaip.rsocket.cloudevents;
+
+import io.cloudevents.CloudEvent;
+import io.cloudevents.CloudEventAttributes;
+
+import java.util.Optional;
+
+/**
+ * CloudEvent wrapper with POJO support
+ *
+ * @author CuiCHangHe
+ */
+public class CloudEventImpl<T> {
+    private final T data;
+    private CloudEvent cloudEvent;
+    private String sourcing;
+
+    public CloudEventImpl(T data, CloudEvent cloudEvent) {
+        this.data = data;
+        this.cloudEvent = cloudEvent;
+    }
+
+    public Optional<T> getData() {
+        return Optional.ofNullable(data);
+    }
+
+
+    public CloudEventAttributes getAttributes() {
+        return cloudEvent;
+    }
+
+    public CloudEvent getCloudEvent() {
+        return cloudEvent;
+    }
+
+    public String getSourcing() {
+        return sourcing;
+    }
+
+    public void setSourcing(String sourcing) {
+        this.sourcing = sourcing;
+    }
+}
