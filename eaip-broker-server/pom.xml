@@ -183,10 +183,10 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <configuration>
                     <from>
-                        <image>adoptopenjdk:11-jdk-hotspot</image>
+                        <image>ghcr.io/graalvm/graalvm-ce:22.3.1</image>
                     </from>
                     <to>
-                        <image>cuihe500/eaip-rsocket-broker:${project.version}</image>
+                        <image>harbor.eaip.com/services/eaip-rsocket-broker:${project.version}</image>
                     </to>
                     <container>
                         <mainClass>${mainClass}</mainClass>
