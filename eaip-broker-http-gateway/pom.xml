@@ -82,7 +82,7 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <configuration>
                     <to>
-                        <image>linuxchina/rsocket-gateway-http</image>
+                        <image>harbor.eaip.com/services/rsocket-gateway-http</image>
                     </to>
                     <container>
                         <ports>

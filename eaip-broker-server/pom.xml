@@ -173,7 +173,7 @@
                     <mainClass>${mainClass}</mainClass>
                     <jvmArguments>-Dvaadin.productionMode</jvmArguments>
                     <image>
-                        <name>cuihe500/eaip-rsocket-broker:${project.version}</name>
+                        <name>harbor.eaip.com/services/eaip-rsocket-broker:${project.version}</name>
                         <builder>paketobuildpacks/builder:base</builder>
                     </image>
                 </configuration>
@@ -268,10 +268,10 @@
                         <artifactId>jib-maven-plugin</artifactId>
                         <configuration>
                             <from>
-                                <image>adoptopenjdk:11-jdk-hotspot</image>
+                                <image>ghcr.io/graalvm/graalvm-ce:22.3.1</image>
                             </from>
                             <to>
-                                <image>cuihe500/eaip-rsocket-broker:${project.version}-k8s</image>
+                                <image>harbor.eaip.com/services/eaip-rsocket-broker:${project.version}-k8s</image>
                             </to>
                             <container>
                                 <mainClass>${mainClass}</mainClass>
@@ -299,7 +299,7 @@
                             <mainClass>${mainClass}</mainClass>
                             <jvmArguments>-Dvaadin.productionMode</jvmArguments>
                             <image>
-                                <name>cuihe500/eaip-rsocket-broker:${project.version}-k8s</name>
+                                <name>harbor.eaip.com/services/eaip-rsocket-broker:${project.version}-k8s</name>
                                 <builder>paketobuildpacks/builder:full</builder>
                             </image>
                         </configuration>

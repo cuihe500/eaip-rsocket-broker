@@ -1,7 +1,7 @@
 version: "3"
 services:
   alibaba-rsocket-broker:
-    image: linuxchina/alibaba-rsocket-broker:1.1.4
+    image: harbor.eaip.com/services/alibaba-rsocket-broker:1.1.4
     ports:
       - "9997:9997"
       - "9998:9998"

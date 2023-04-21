@@ -176,7 +176,7 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <configuration>
                     <to>
-                        <image>linuxchina/rsocket-gateway-grpc</image>
+                        <image>harbor.eaip.com/services/rsocket-gateway-grpc</image>
                     </to>
                     <container>
                         <ports>
