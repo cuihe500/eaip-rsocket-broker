@@ -8,7 +8,7 @@ Please visit https://gitlab.eaip.com/cuihe500/eaip-rsocket-broker for more.
 
 ### Requirements
 
-* JDK 1.8.0+
+* JDK 1.8.0+ (Project JDK:Graalvm 17)
 
 ### How to run the server?
 

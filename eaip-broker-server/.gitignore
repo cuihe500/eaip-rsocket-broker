@@ -36,3 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Vaadin ###
+package.json
+package-lock.json
+node_modules
+frontend/generated

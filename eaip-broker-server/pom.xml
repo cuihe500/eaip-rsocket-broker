@@ -20,9 +20,10 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <vaadin.version>24.0.4</vaadin.version>
-        <flexmark-all.version>0.64.0</flexmark-all.version>
+        <vaadin.version>24.0.4</vaadin.version> <!-- Console Web Pages -->
+        <flexmark-all.version>0.64.0</flexmark-all.version> <!-- MarkDown Tools -->
         <!-- undertow 2.3.0 uses Jakarta EE 10, and not compatible with Spring Boot 2.x -->
+        <!-- Update spring version to 3.0.5 , Change undertow version to 2.3.5.Final -->
         <undertow.version>2.3.5.Final</undertow.version>
         <vaadin.productionMode>true</vaadin.productionMode>
         <mainClass>org.eaip.rsocket.broker.EAIPRSocketBrokerServer</mainClass>
@@ -32,12 +33,12 @@
         <dependency>
             <groupId>org.eaip</groupId>
             <artifactId>eaip-rsocket-core</artifactId>
-            <version>1.1.5-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eaip</groupId>
             <artifactId>eaip-broker-spring-boot-starter</artifactId>
-            <version>1.1.5-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,7 +50,7 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId> <!-- exclusion Tomcat Change to undertow -->
                 </exclusion>
             </exclusions>
         </dependency>
@@ -172,7 +173,7 @@
                     <mainClass>${mainClass}</mainClass>
                     <jvmArguments>-Dvaadin.productionMode</jvmArguments>
                     <image>
-                        <name>linuxchina/eaip-rsocket-broker:${project.version}</name>
+                        <name>cuihe500/eaip-rsocket-broker:${project.version}</name>
                         <builder>paketobuildpacks/builder:base</builder>
                     </image>
                 </configuration>
@@ -185,7 +186,7 @@
                         <image>adoptopenjdk:11-jdk-hotspot</image>
                     </from>
                     <to>
-                        <image>linuxchina/eaip-rsocket-broker:${project.version}</image>
+                        <image>cuihe500/eaip-rsocket-broker:${project.version}</image>
                     </to>
                     <container>
                         <mainClass>${mainClass}</mainClass>
@@ -224,7 +225,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
@@ -245,7 +246,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 
@@ -270,7 +271,7 @@
                                 <image>adoptopenjdk:11-jdk-hotspot</image>
                             </from>
                             <to>
-                                <image>linuxchina/eaip-rsocket-broker:${project.version}-k8s</image>
+                                <image>cuihe500/eaip-rsocket-broker:${project.version}-k8s</image>
                             </to>
                             <container>
                                 <mainClass>${mainClass}</mainClass>
@@ -298,7 +299,7 @@
                             <mainClass>${mainClass}</mainClass>
                             <jvmArguments>-Dvaadin.productionMode</jvmArguments>
                             <image>
-                                <name>linuxchina/eaip-rsocket-broker:${project.version}-k8s</name>
+                                <name>cuihe500/eaip-rsocket-broker:${project.version}-k8s</name>
                                 <builder>paketobuildpacks/builder:full</builder>
                             </image>
                         </configuration>
