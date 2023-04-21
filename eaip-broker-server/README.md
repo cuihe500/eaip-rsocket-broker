@@ -28,7 +28,7 @@ jbang rsocket-broker@eaip-rsocket-broker
 version: "3"
 services:
   eaip-rsocket-broker:
-    image: harbor.eaip.com/services/eaip-rsocket-broker:1.1.1
+    image: linuxchina/eaip-rsocket-broker:1.1.1
     ports:
       - "9997:9997"
       - "9998:9998"
