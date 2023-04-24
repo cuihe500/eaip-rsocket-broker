@@ -29,8 +29,8 @@ EAIP RSocket Broker是一款基于RSocket协议的反应式对等通讯系统，
 
 更多RSocket Broker资源和介绍，请访问以下资源：
 
-* Alibaba RSocket Broker Wiki https://github.com/alibaba/alibaba-rsocket-broker/wiki
-* Alibaba RSocket Broker样例: https://github.com/alibaba-rsocket-broker/
+* EAIP RSocket Broker Wiki https://github.com/alibaba/alibaba-rsocket-broker/wiki
+* EAIP RSocket Broker样例: https://github.com/alibaba-rsocket-broker/
 * RSocket by Example: http://rsocketbyexample.info
 * Github Discussions讨论区: https://github.com/alibaba/alibaba-rsocket-broker/discussions
 
@@ -58,21 +58,21 @@ Broker完全是异步化的，你不需要关心线程池这些概念，而且�
 
 ### 项目模块
 
-* alibaba-rsocket-service-common: RSocket服务接口定义基础模块，包括Annotation, Reactive相关框架和支撑类
-* alibaba-rsocket-core: RSocket核心功能模块
-* alibaba-rsocket-spring-boot-starter: Spring Boot Starter for RSocket, 包括RSocket服务发布和消费
-* alibaba-broker-spring-boot-starter: Spring Boot Starter for RSocket Broker, 方便第三方进行扩展
-* alibaba-rsocket-broker: Alibaba RSocket Broker参考实现
-* alibaba-broker-registry-client-spring-boot-starter: 通过RSocket Broker对外提供服务发现服务
-* alibaba-broker-config-client-spring-boot-starter: 通过RSocket Broker对外提供配置推送服务
-* rsocket-broker-gateway-http: RSocket Broker HTTP网关，将HTTP转换为RSocket协议
-* rsocket-broker-gateway-grpc: RSocket Broker gRPC网关，将gRPC转换为RSocket协议
+* eaip-rsocket-service-common: RSocket服务接口定义基础模块，包括Annotation, Reactive相关框架和支撑类
+* eaip-rsocket-core: RSocket核心功能模块
+* eaip-rsocket-spring-boot-starter: Spring Boot Starter for RSocket, 包括RSocket服务发布和消费
+* eaip-broker-spring-boot-starter: Spring Boot Starter for RSocket Broker, 方便第三方进行扩展
+* eaip-rsocket-broker: Alibaba RSocket Broker参考实现
+* eaip-broker-registry-client-spring-boot-starter: 通过RSocket Broker对外提供服务发现服务
+* eaip-broker-config-client-spring-boot-starter: 通过RSocket Broker对外提供配置推送服务
+* eaip-broker-gateway-http: RSocket Broker HTTP网关，将HTTP转换为RSocket协议
+* eaip-broker-gateway-grpc: RSocket Broker gRPC网关，将gRPC转换为RSocket协议
 
 ### 开发环境要求
 
-* JDK 11: RSocket Broker Server基于Java 11，但是Broker Client等是Java 8兼容的
-* Maven 3.5.x
-* Node 16+: RSocket Broker采用Vaadin 23.0版本构建控制界面，所以你需要安装Node 16以上版本
+* JDK 17: RSocket Broker Server基于Java 17，但是Broker Client等是Java 8兼容的
+* Maven 3.9.1
+* Node 18+: RSocket Broker采用Vaadin 23.0版本构建控制界面，所以你需要安装Node 18以上版本
 
 ### 如何运行Example?
 
