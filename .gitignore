@@ -92,17 +92,17 @@ fabric.properties
 
 ### User Template
 node_modules
-alibaba-broker-server/package.json
-alibaba-broker-server/package-lock.json
-alibaba-broker-server/webpack.config.js
-alibaba-broker-server/webpack.generated.js
-alibaba-broker-server/vite.config.ts
-alibaba-broker-server/vite.generated.ts
+eaip-broker-server/package.json
+eaip-broker-server/package-lock.json
+eaip-broker-server/webpack.config.js
+eaip-broker-server/webpack.generated.js
+eaip-broker-server/vite.config.ts
+eaip-broker-server/vite.generated.ts
 
 .DS_Store
 */.DS_Store
 .envrc
 updates.txt
-alibaba-broker-server/frontend/generated
-alibaba-broker-server/tsconfig.json
-alibaba-broker-server/types.d.ts
+eaip-broker-server/frontend/generated
+eaip-broker-server/tsconfig.json
+eaip-broker-server/types.d.ts

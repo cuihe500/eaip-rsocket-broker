@@ -20,7 +20,7 @@ import java.util.Properties;
 /**
  * RSocket Config properties source locator  with RSocket Broker
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 public class RSocketConfigPropertySourceLocator implements PropertySourceLocator {
     /**
@@ -32,7 +32,7 @@ public class RSocketConfigPropertySourceLocator implements PropertySourceLocator
      * last config text
      */
     private static String LAST_CONFIG_TEXT = null;
-    private Logger log = LoggerFactory.getLogger(RSocketConfigPropertySourceLocator.class);
+    private final Logger log = LoggerFactory.getLogger(RSocketConfigPropertySourceLocator.class);
 
     public static String getLastConfigText() {
         return LAST_CONFIG_TEXT;

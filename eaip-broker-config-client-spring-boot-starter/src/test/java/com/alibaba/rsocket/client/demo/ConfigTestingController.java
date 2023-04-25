@@ -12,7 +12,7 @@ import static org.springframework.context.annotation.ScopedProxyMode.DEFAULT;
 /**
  * config testing controller
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @RestController
 @RefreshScope(proxyMode = DEFAULT)

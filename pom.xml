@@ -20,6 +20,17 @@
     <packaging>pom</packaging>
     <version>1.1.4</version>
 
+    <distributionManagement>
+        <repository>
+            <id>eaip-releases</id>
+            <url>http://114.116.41.79:8081/repository/eaip-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>eaip-snapshot</id>
+            <url>http://114.116.41.79:8081/repository/eaip-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>

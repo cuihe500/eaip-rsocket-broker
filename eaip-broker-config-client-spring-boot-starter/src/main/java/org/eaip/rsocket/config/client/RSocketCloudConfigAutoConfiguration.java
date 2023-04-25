@@ -13,7 +13,7 @@ import reactor.core.publisher.Sinks;
 /**
  * RSocket cloud config auto configuration
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @Configuration
 public class RSocketCloudConfigAutoConfiguration {

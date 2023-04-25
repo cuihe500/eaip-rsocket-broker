@@ -18,7 +18,7 @@ import java.util.Properties;
 /**
  * Config Event Processor
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @SuppressWarnings("rawtypes")
 @Component

@@ -13,7 +13,7 @@
     <artifactId>eaip-rsocket-spring-boot-starter</artifactId>
 
     <name>EAIP RSocket Spring Boot Starter</name>
-    <description>Alibaba RSocket Spring Boot Starter to talk with RSocket Broker</description>
+    <description>EAIP RSocket Spring Boot Starter to talk with RSocket Broker</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

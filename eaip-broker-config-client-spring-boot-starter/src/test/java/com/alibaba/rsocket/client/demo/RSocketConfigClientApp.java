@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * RSocket config client app
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @SpringBootApplication
 public class RSocketConfigClientApp {

@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * config fetch test
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @Disabled
 public class ConfigFetchTest extends ConfigBaseTestCase {

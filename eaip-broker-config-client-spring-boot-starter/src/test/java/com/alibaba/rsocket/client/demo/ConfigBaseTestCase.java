@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * config client base test case
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @SpringBootTest
 public class ConfigBaseTestCase {

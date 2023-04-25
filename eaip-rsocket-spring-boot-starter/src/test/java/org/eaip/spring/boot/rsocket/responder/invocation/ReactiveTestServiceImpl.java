@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 /**
  * local reactive test service implementation
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 @RSocketService(serviceInterface = ReactiveTestService.class)
 @Primary

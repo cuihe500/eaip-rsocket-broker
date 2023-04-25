@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 /**
  * RSocket Service Annotation Processor test
  *
- * @author leijuan
+ * @author CuiChangHe
  */
 public class RSocketServiceAnnotationProcessorTest {
     private RSocketServiceAnnotationProcessor processor;
