@@ -22,7 +22,7 @@
 
     <distributionManagement>
         <repository>
-            <id>eaip-releases</id>
+            <id>eaip-release</id>
             <url>http://114.116.41.79:8081/repository/eaip-release/</url>
         </repository>
         <snapshotRepository>

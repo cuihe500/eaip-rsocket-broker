@@ -57,7 +57,7 @@ public class MainLayout extends AppLayout implements DisposableBean {
         this.filterChain = filterChain;
         this.appNotificationProcessor = appNotificationProcessor;
         //init the Layout
-        Image logo = new Image("/rsocket-logo.svg", "RSocket Logo");
+        Image logo = new Image("/eaip-rsocket-logo.svg", "RSocket Logo");
         logo.setHeight("44px");
         logo.setAlt("RSocket Cluster");
         addToNavbar(new DrawerToggle(), logo);
