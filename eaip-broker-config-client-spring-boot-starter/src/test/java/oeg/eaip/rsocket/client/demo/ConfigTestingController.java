@@ -1,4 +1,4 @@
-package org.eaip.rsocket.client.demo;
+package oeg.eaip.rsocket.client.demo;
 
 import org.eaip.rsocket.config.bootstrap.RSocketConfigPropertySourceLocator;
 import org.springframework.beans.factory.annotation.Value;

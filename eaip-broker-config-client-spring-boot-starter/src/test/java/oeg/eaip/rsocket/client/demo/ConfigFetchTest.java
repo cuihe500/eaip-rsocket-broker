@@ -1,4 +1,4 @@
-package org.eaip.rsocket.client.demo;
+package oeg.eaip.rsocket.client.demo;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

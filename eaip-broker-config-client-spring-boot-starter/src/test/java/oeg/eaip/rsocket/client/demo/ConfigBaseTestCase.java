@@ -1,4 +1,4 @@
-package org.eaip.rsocket.client.demo;
+package oeg.eaip.rsocket.client.demo;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
