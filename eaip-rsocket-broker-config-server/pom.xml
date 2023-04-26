@@ -11,7 +11,7 @@
 
     <groupId>org.eaip</groupId>
     <artifactId>eaip-rsocket-broker-config-server</artifactId>
-    <name>RSocket config server</name>
+    <name>EAIP RSocket Config Server</name>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
