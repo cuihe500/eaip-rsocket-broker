@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.eaip.rsocket</groupId>
+        <artifactId>eaip-rsocket-broker-parent</artifactId>
+        <version>1.1.5</version>
+    </parent>
+
+    <groupId>org.eaip</groupId>
+    <artifactId>eaip-rsocket-broker-config-server</artifactId>
+    <name>RSocket config server</name>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mainClass>org.eaip.rsocket.config.server.EAIPRSocketConfigServer</mainClass>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.eaip</groupId>
+            <artifactId>eaip-rsocket-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eaip</groupId>
+            <artifactId>eaip-rsocket-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <configuration>
+                    <from>
+                        <image>ghcr.io/graalvm/graalvm-ce:22.3.1</image>
+                    </from>
+                    <to>
+                        <image>harbor.eaip.com/services/eaip-rsocket-config-server:${project.version}</image>
+                    </to>
+                    <container>
+                        <mainClass>${mainClass}</mainClass>
+                        <entrypoint>/bin/sh,/app/run-java.sh</entrypoint>
+                        <environment>
+                            <JAVA_APP_DIR>/app</JAVA_APP_DIR>
+                            <JAVA_CLASSPATH>
+                                /app/libs/eaip-rsocket-core-${project.version}.jar:/app/resources:/app/classes:/app/libs/*
+                            </JAVA_CLASSPATH>
+                            <JAVA_MAIN_CLASS>${mainClass}</JAVA_MAIN_CLASS>
+                        </environment>
+                        <ports>
+                            <port>8280</port>
+                        </ports>
+                    </container>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

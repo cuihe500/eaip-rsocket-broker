@@ -13,6 +13,7 @@
         <module>eaip-broker-http-gateway</module>
         <module>eaip-broker-grpc-gateway</module>
         <module>eaip-broker-config-client-spring-boot-starter</module>
+        <module>eaip-rsocket-broker-config-server</module>
     </modules>
 
     <groupId>com.eaip.rsocket</groupId>

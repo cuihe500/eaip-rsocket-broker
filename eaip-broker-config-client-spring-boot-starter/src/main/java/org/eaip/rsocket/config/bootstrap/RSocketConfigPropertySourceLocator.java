@@ -3,12 +3,15 @@ package org.eaip.rsocket.config.bootstrap;
 import org.eaip.rsocket.observability.RsocketErrorCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.bootstrap.config.PropertySourceLocator;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.PropertiesPropertySource;
 import org.springframework.core.env.PropertySource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.util.StringUtils;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.io.StringReader;
@@ -34,6 +37,8 @@ public class RSocketConfigPropertySourceLocator implements PropertySourceLocator
     private static String LAST_CONFIG_TEXT = null;
     private final Logger log = LoggerFactory.getLogger(RSocketConfigPropertySourceLocator.class);
 
+    private static final Map<String,String> initProperties = new HashMap<>();
+
     public static String getLastConfigText() {
         return LAST_CONFIG_TEXT;
     }
@@ -49,9 +54,28 @@ public class RSocketConfigPropertySourceLocator implements PropertySourceLocator
         String jwtToken = environment.getProperty("rsocket.jwt-token");
         String rsocketBrokers = environment.getProperty("rsocket.brokers");
         String applicationName = environment.getProperty("spring.application.name");
+        if (StringUtils.hasText(jwtToken)) {
+            initProperties.put("rsocket.jwt-token",jwtToken);
+        } else if (StringUtils.hasText(initProperties.get("rsocket.jwt-token"))) {
+            jwtToken = initProperties.get("rsocket.jwt-token");
+        }
+
+        if (StringUtils.hasText(rsocketBrokers)) {
+            initProperties.put("rsocket.brokers",rsocketBrokers);
+        } else if (StringUtils.hasText(initProperties.get("rsocket.brokers"))) {
+            rsocketBrokers = initProperties.get("rsocket.brokers");
+        }
+
+        if (StringUtils.hasText(applicationName)) {
+            initProperties.put("spring.application.name",applicationName);
+        } else if (StringUtils.hasText(initProperties.get("spring.application.name"))) {
+            applicationName = initProperties.get("spring.application.name");
+        }
+
         if (CONFIG_SOURCES.containsKey(applicationName)) {
             return CONFIG_SOURCES.get(applicationName);
         }
+
         if (jwtToken != null && rsocketBrokers != null && applicationName != null) {
             Properties configProperties = new Properties();
             for (String rsocketBroker : rsocketBrokers.split(",")) {
