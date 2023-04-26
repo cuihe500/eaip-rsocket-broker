@@ -70,8 +70,7 @@ public class MainLayout extends AppLayout implements DisposableBean {
                 brokers(),
                 filters(),
                 jwt(),
-                system(),
-                faq()
+                system()
         );
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.addSelectedChangeListener(event -> {
@@ -128,14 +127,6 @@ public class MainLayout extends AppLayout implements DisposableBean {
         final Icon icon = TOOLS.create();
         final Tab tab = new Tab(new HorizontalLayout(icon, label));
         tab2Workspace.put(tab, new ServiceTestingView(this.handlerRegistry, this.serviceRoutingSelector));
-        return tab;
-    }
-
-    private Tab faq() {
-        final Span label = new Span("FAQ");
-        final Icon icon = QUESTION.create();
-        final Tab tab = new Tab(new HorizontalLayout(icon, label));
-        tab2Workspace.put(tab, new FAQView());
         return tab;
     }
 
