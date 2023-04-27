@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rsocket-broker
-  namespace: rsocket
+  name: eaip-rsocket-broker
+  namespace: eaip-rsocket-broker
   labels:
-    app: rsocket-broker
+    app: eaip-rsocket-broker
 spec:
-  replicas: 2
+  replicas: 3
   template:
     metadata:
-      name: rsocket-broker
+      name: eaip-rsocket-broker
       labels:
-        app: rsocket-broker
+        app: eaip-rsocket-broker
     spec:
       containers:
-        - name: rsocket-broker
-          image: linuxchina/eaip-rsocket-broker:1.1.0-SNAPSHOT-k8s
+        - name: eaip-rsocket-broker
+          image: harbor.eaip.com/services/eaip-rsocket-broker:1.1.5-k8s
           ports:
             - containerPort: 9997
             - containerPort: 9998
@@ -50,8 +50,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rsocket-broker
-  namespace: rsocket
+  name: eaip-rsocket-broker
+  namespace: eaip-rsocket-broker
 spec:
   ports:
     - name: http
@@ -63,4 +63,4 @@ spec:
       targetPort: 9999
       protocol: TCP
   selector:
-    app: rsocket-broker
+    app: eaip-rsocket-broker
