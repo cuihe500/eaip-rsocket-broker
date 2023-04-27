@@ -45,7 +45,7 @@ spec:
       restartPolicy: Always
   selector:
     matchLabels:
-      app: rsocket-broker
+      app: eaip-rsocket-broker
 ---
 apiVersion: v1
 kind: Service
