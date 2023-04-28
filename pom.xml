@@ -37,7 +37,7 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <spring-boot.version>3.0.5</spring-boot.version>
+        <spring-boot.version>3.0.6</spring-boot.version>
         <bytebuddy.version>1.14.4</bytebuddy.version>
         <micrometer.version>1.10.5</micrometer.version>
         <reactor-bom.version>2022.0.6</reactor-bom.version>
